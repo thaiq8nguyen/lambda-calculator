@@ -1,9 +1,17 @@
 import React from "react";
-
-const NumberButton = () => {
+import styles from "./NumberButton.module.scss";
+const NumberButton = ({number, handleNumberClick}) => {
   return (
-    <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </>
+    
+    
+    <button 
+      className={styles.numberButton} 
+      onClick={() => handleNumberClick(number)}
+      >
+      {number}
+    </button>
+    
   );
 };
+
+export default NumberButton;
